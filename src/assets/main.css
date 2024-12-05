@@ -1,4 +1,5 @@
 @import './base.css';
+@import 'prismjs/themes/prism.css';
 
 #app {
   max-width: 1280px;
@@ -15,6 +16,53 @@ a,
   padding: 3px;
 }
 
+.title{
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+
+  color: #e89415;
+}
+
+.subtitle {
+  display: flex;
+  margin: 1rem 0;
+  font-size: 20px;
+  font-weight: bold;
+
+  color: #1597e8;
+}
+
+.question {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.types  {
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #e89415;
+}
+
+.code-block {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  max-width: 100%;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+
+  background: #212027;
+  border: 1px solid #e89415;
+  border-radius: 5px;
+}
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
@@ -28,7 +76,6 @@ a,
   }
 
   #app {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
