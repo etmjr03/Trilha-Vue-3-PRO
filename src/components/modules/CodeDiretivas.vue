@@ -1,34 +1,25 @@
+<script>
+import VShow from "@/components/modules/diretivas/VShow.vue";
+import VIfElse from "@/components/modules/diretivas/VIfElse.vue";
+
+export default {
+  components: {
+    VShow,
+    VIfElse
+  }
+};
+</script>
+
 <template>
   <div>
     <span class="subtitle">Diretivas</span>
     <p class="question">Quais são as diretivas?</p>
-    <p class="types">v-show</p>
     <p>
-      v-show é uma condição que enquanto for verdadeira exibirá o elemento, se for false irá aplicar o estilo
-      display: none no elemento
+      Primeiro é interessante lembrar que diretivas são instruções aplicadas no layout e iniciam com v-
+      e é seguido pelo nome da diretiva, exemplo: v-nome-da-diretiva. Também pode utilizar operadores nas condições
     </p>
-    <pre v-html="highlightedCode.vShow" class="code-block"></pre>
+
+    <VShow />
+    <VIfElse />
   </div>
 </template>
-
-<script>
-import Prism from 'prismjs';
-import { exampleVShow } from '@/codes/codesJS.js';
-
-export default {
-  data() {
-    return {
-      code: exampleVShow,
-    };
-  },
-  computed: {
-    highlightedCode() {
-      const vShow = Prism.highlight(this.code, Prism.languages.html, 'html');
-
-      return {
-        vShow
-      };
-    },
-  },
-};
-</script>

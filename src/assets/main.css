@@ -54,13 +54,27 @@ a,
   margin: 1rem 0;
   padding: 1rem;
   font-size: 14px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  overflow-x: auto;
+  overflow-x: scroll;
 
   background: #212027;
   border: 1px solid #e89415;
   border-radius: 5px;
+}
+
+.example {
+  display: block;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.example-title {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+
+  color: #e89415;
 }
 
 @media (hover: hover) {
