@@ -106,10 +106,10 @@ export default {
   margin: 1rem 0;
   padding: 0.5rem 0;
   text-align: center;
-  outline: none; /* Remove o contorno padrão */
+  outline: none;
   box-shadow: none;
 
-  border: 3px solid #1597e8;
+  border: none;
   border-radius: 5px;
 }
 </style>

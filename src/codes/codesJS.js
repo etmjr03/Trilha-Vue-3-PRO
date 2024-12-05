@@ -33,8 +33,7 @@ export const exampleVIfElse  =
 `;
 
 export const exampleVIfElseScript =
-`
-data() {
+`data() {
   return {
     valueProduct: '',
   };
@@ -45,5 +44,33 @@ computed: {
   return {
     valueProduct
   };
+}
+`;
+
+export const exampleVFor =
+`
+<select v-model="users[0].name" class="select-users">
+  <option v-for="user in users" :key="user.name" :value="user.name">{{ user.name }} - {{ user.profile }}</option>
+</select>
+`
+
+export const exampleVForScript =
+`data() {
+  return {
+    users: [
+      {
+        name: 'Junin',
+        profile: 'Admin',
+      },
+      {
+        name: 'July',
+        profile: 'Admin',
+      },
+      {
+        name: 'Usuário de teste',
+        profile: 'Tester',
+      }
+    ]
+  }
 }
 `;

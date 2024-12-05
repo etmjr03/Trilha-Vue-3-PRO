@@ -1,11 +1,13 @@
 <script>
 import VShow from "@/components/modules/diretivas/VShow.vue";
 import VIfElse from "@/components/modules/diretivas/VIfElse.vue";
+import VFor from "@/components/modules/diretivas/VFor.vue";
 
 export default {
   components: {
     VShow,
-    VIfElse
+    VIfElse,
+    VFor
   }
 };
 </script>
@@ -21,5 +23,6 @@ export default {
 
     <VShow />
     <VIfElse />
+    <VFor />
   </div>
 </template>
