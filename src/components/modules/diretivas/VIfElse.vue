@@ -68,7 +68,7 @@ export default {
         placeholder="Digite seu lance"
       />
 
-      <p v-if="valueProduct === 0" :style="error">O lance tem que ser de pelo menos R$ 1</p>
+      <p v-if="valueProduct === 0 || valueProduct < 0" :style="error">O lance tem que ser de pelo menos R$ 1</p>
       <p v-else-if="valueProduct === ''" :style="error">Você precisa ofertar um valor</p>
 
       <p v-else-if="valueProduct > 0 && valueProduct < 900" :style="warning">
