@@ -47,15 +47,15 @@ a,
 }
 
 .code-block {
-  display: flex;
+  display: block;
   width: 100%;
   height: fit-content;
   max-width: 100%;
   margin: 1rem 0;
   padding: 1rem;
   font-size: 14px;
-  overflow-x: scroll;
-
+  overflow-x: auto;
+  overflow-y: hidden;
   background: #212027;
   border: 1px solid #e89415;
   border-radius: 5px;

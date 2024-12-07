@@ -2,12 +2,14 @@
 import VShow from "@/components/modules/diretivas/VShow.vue";
 import VIfElse from "@/components/modules/diretivas/VIfElse.vue";
 import VFor from "@/components/modules/diretivas/VFor.vue";
+import VBind from "@/components/modules/diretivas/VBind.vue";
 
 export default {
   components: {
     VShow,
     VIfElse,
-    VFor
+    VFor,
+    VBind
   }
 };
 </script>
@@ -24,5 +26,6 @@ export default {
     <VShow />
     <VIfElse />
     <VFor />
+    <VBind />
   </div>
 </template>

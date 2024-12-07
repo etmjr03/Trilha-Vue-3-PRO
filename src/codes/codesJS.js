@@ -74,3 +74,21 @@ export const exampleVForScript =
   }
 }
 `;
+
+export const exampleVbind =
+`data() {
+    return {
+      code: exampleVbind,
+      codeJS: exampleVbindScript,
+      src: 'https://cataas.com/cat',
+      classExample: ['image-exaple', { 'bg-active': true, 'bg-inactive': false }],
+      styleExample: { 'border-radius': ['50px', '50%']},
+      // valores do array do style tem prioridade sempre o da direita, se o navegador não interpretar ele, irá para o próximo
+    }
+  }
+`;
+
+export const exampleVbindScript =
+`<img :src="src" :class="classExample" :style="styleExample">
+<img v-bind="{src: 'https://cataas.com/cat', class: ['image-exaple', 'bg-active'], style: 'border-radius: 50%'}">
+`;
