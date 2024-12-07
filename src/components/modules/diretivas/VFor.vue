@@ -26,7 +26,7 @@ export default {
   computed: {
     highlightedCode() {
       const vFor = Prism.highlight(this.code, Prism.languages.html, 'html');
-      const vForScript = Prism.highlight(this.codeJS, Prism.languages.html, 'html');
+      const vForScript = Prism.highlight(this.codeJS, Prism.languages.javascript, 'javascript');
 
       return {
         vFor,

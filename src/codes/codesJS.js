@@ -20,16 +20,15 @@ export const exampleVShowScript =
 };`;
 
 export const exampleVIfElse  =
-`
-  <p v-if="valueProduct === 0" :style="error">O lance tem que ser de pelo menos R$ 1</p>
+`<p v-if="valueProduct === 0" :style="error">O lance tem que ser de pelo menos R$ 1</p>
 
-  <p v-else-if="valueProduct === ''" :style="error">Você precisa ofertar um valor</p>
+<p v-else-if="valueProduct === ''" :style="error">Você precisa ofertar um valor</p>
 
-  <p v-else-if="valueProduct > 0 && valueProduct < 900" :style="warning">Seu valor ofertado de {{ valueProduct }} reais é inferior ao oferecido.</p>
+<p v-else-if="valueProduct > 0 && valueProduct < 900" :style="warning">Seu valor ofertado de {{ valueProduct }} reais é inferior ao oferecido.</p>
 
-  <p v-else-if="valueProduct == 900" :style="warning">O valor ofertado de {{ valueProduct }} reais é igual ao oferecido, ofereça mais para ganhar!</p>
+<p v-else-if="valueProduct == 900" :style="warning">O valor ofertado de {{ valueProduct }} reais é igual ao oferecido, ofereça mais para ganhar!</p>
 
-  <p v-else :style="success">Seu lance ofertado de {{ valueProduct }} reais é superior ao oferecido, o produto pode ser seu!</p>
+<p v-else :style="success">Seu lance ofertado de {{ valueProduct }} reais é superior ao oferecido, o produto pode ser seu!</p>
 `;
 
 export const exampleVIfElseScript =
@@ -48,9 +47,8 @@ computed: {
 `;
 
 export const exampleVFor =
-`
-<select v-model="users[0].name" class="select-users">
-  <option v-for="user in users" :key="user.name" :value="user.name">{{ user.name }} - {{ user.profile }}</option>
+`<select v-model="users[0].name" class="select-users">
+   <option v-for="user in users" :key="user.name" :value="user.name">{{ user.name }} - {{ user.profile }}</option>
 </select>
 `
 
@@ -76,6 +74,11 @@ export const exampleVForScript =
 `;
 
 export const exampleVbind =
+`<img :src="src" :class="classExample" :style="styleExample">
+<img v-bind="{src: 'https://cataas.com/cat', class: ['image-exaple', 'bg-active'], style: 'border-radius: 50%'}">
+`;
+
+export const exampleVbindScript =
 `data() {
     return {
       code: exampleVbind,
@@ -86,9 +89,4 @@ export const exampleVbind =
       // valores do array do style tem prioridade sempre o da direita, se o navegador não interpretar ele, irá para o próximo
     }
   }
-`;
-
-export const exampleVbindScript =
-`<img :src="src" :class="classExample" :style="styleExample">
-<img v-bind="{src: 'https://cataas.com/cat', class: ['image-exaple', 'bg-active'], style: 'border-radius: 50%'}">
 `;

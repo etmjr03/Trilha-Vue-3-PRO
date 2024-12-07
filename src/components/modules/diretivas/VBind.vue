@@ -15,12 +15,12 @@ export default {
   },
   computed: {
     highlightedCode() {
-      const vFor = Prism.highlight(this.code, Prism.languages.html, 'html');
-      const vForScript = Prism.highlight(this.codeJS, Prism.languages.html, 'html');
+      const vBind = Prism.highlight(this.code, Prism.languages.html, 'html');
+      const vBindScript = Prism.highlight(this.codeJS, Prism.languages.javascript, 'javascript');
 
       return {
-        vFor,
-        vForScript
+        vBind,
+        vBindScript
       };
     },
   },
@@ -35,8 +35,8 @@ export default {
       valores dinâmicos para os atributos do elemento.
     </p>
 
-    <pre class="code-block">{{ highlightedCode.vFor }}</pre>
-    <pre v-html="highlightedCode.vForScript" class="code-block"></pre>
+    <pre v-html="highlightedCode.vBind" class="code-block"></pre>
+    <pre v-html="highlightedCode.vBindScript" class="code-block"></pre>
 
     <div class="example">
       <p class="example-title">Exemplo</p>
